@@ -4,12 +4,15 @@
   align-content: center;
   justify-content: center;
 }
-.board-row {
+/* .board-row {
   display: flex;
   display: table;
-}
+} */
 .square {
   height: 75px;
   width: 75px;
   border: 1px black solid;
+}
+.gray {
+  background-color: gray;
 }

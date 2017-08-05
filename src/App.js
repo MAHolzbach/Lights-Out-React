@@ -4,9 +4,15 @@ import logo from './logo.svg';
 import './App.css';
 
 class Square extends Component {
+  constructor(props) {
+    super(props)
+  }
+  handleClick = () => {
+    this.className = 'gray';
+  }
   render() {
     return (
-      <div className='square'></div>
+      <div className='square' onClick={this.handleClick}></div>
     );
   }
 }
