@@ -5,14 +5,24 @@ import './App.css';
 
 class Square extends Component {
   constructor(props) {
-    super(props)
+    super(props);
+
+    this.state = {
+      bgColor: 'white'
+    };
   }
   handleClick = () => {
-    this.className = 'gray';
+    if(this.state.bgColor === 'white') {
+      this.setState({bgColor: 'gray'});
+    } else {
+      this.setState({bgColor: 'white'});
+    }
   }
   render() {
+    let squareColor = this.state.bgColor;
+    let cssClasses = `${squareColor} square`;
     return (
-      <div className='square' onClick={this.handleClick}></div>
+      <div className={cssClasses} onClick={this.handleClick}></div>
     );
   }
 }
